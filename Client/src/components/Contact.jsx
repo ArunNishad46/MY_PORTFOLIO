@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { toast } from 'react-toastify';
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,9 +19,10 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try{
-      const response = await fetch(`${import.meta.env.VITE_API_URI}/message`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/message`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,12 +34,15 @@ function Contact() {
 
       if (response.ok) {
         toast.success(data.message);
+        setLoading(false);
         setFormData({ name: '', email: '', message: '' });
       } else {
         toast.error(data.message);
+        setLoading(false);
       }
     }catch(error){
       toast.error(error.message);
+      setLoading(false);
     }
   };
 
@@ -95,9 +100,10 @@ function Contact() {
         </div>
         <button
           type="submit"
-          className="px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold text-sm transition"
+          className="px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold text-sm transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={loading}
         >
-          Send Message
+          {loading ? "Sending..." : "Send Message"}
         </button>
       </form>
     </section>

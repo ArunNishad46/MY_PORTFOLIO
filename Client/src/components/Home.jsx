@@ -10,8 +10,8 @@ function Home() {
       className="pt-25 pb-16 flex flex-col md:flex-row items-center gap-10"
     >
       <div className="flex-1 space-y-6">
-        <p className="text-xl font-semibold uppercase tracking-[0.2em] text-cyan-400">
-          Hi There!
+        <p className="flex items-center text-xl font-semibold uppercase tracking-[0.2em] text-cyan-400">
+          Hi There!<img className="inline-block w-8 h-8" src="/image/hand.webp" alt="wave" />
         </p>
         <h1 className="text-5xl md:text-5xl font-extrabold">
           I'm ARUN
