@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import Brevo from '@getbrevo/brevo';
 import dotenv from 'dotenv';
-import nodemailer from 'nodemailer';
 dotenv.config();
 
 const app = express();
@@ -11,20 +11,15 @@ app.use(cors(
   {
     origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
   }
 ));
 
 app.use(express.json());
 
-const transporter = nodemailer.createTransport({
-  host: process.env.BREVO_SMTP_HOST,
-  port: process.env.BREVO_SMTP_PORT,
-  secure: false,
-  auth: {
-    user: process.env.BREVO_SMTP_USER,
-    pass: process.env.BREVO_SMTP_PASS
-  }
-});
+// Brevo API Configuration
+const apiInstance = new Brevo.TransactionalEmailsApi();
+apiInstance.authentications['apiKey'].apiKey = process.env.BREVO_API_KEY;
 
 app.post('/message', async (req, res) => {
   const {name, email, message} = req.body;
@@ -34,27 +29,31 @@ app.post('/message', async (req, res) => {
   }
 
   try {
-    await transporter.sendMail({
-      from: `Arun <${process.env.FROM_EMAIL}>`,
-      to: process.env.FROM_EMAIL,
+    // Send email to you
+    await apiInstance.sendTransacEmail({
+      sender: { name: "Arun", email: process.env.FROM_EMAIL },
+      to: [{ email: process.env.FROM_EMAIL }],
       subject: "New Portfolio Contact Submission",
-      html: `
-      <h3>New Message</h3>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Message:</strong><br>${message}</p>`,
-    })
+      htmlContent: `
+        <h3>New Message</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong><br>${message}</p>
+      `
+    });
 
-    await transporter.sendMail({
-      from: `Arun <${process.env.FROM_EMAIL}>`,
-      to: email,
+    // Auto-reply to user
+    await apiInstance.sendTransacEmail({
+      sender: { name: "Arun", email: process.env.FROM_EMAIL },
+      to: [{ email }],
       subject: "Thanks for contacting me!",
-      html: `
-      <h3>Hello ${name},</h3>
-      <p>Thank you for getting in touch! We have received your message and will get back to you shortly.</p><br>
-      <p>Best regards,</p>
-      <strong>Arun</strong>`,
-    })
+      htmlContent: `
+        <h3>Hello ${name},</h3>
+        <p>Thank you for getting in touch! We have received your message and will get back to you shortly.</p><br>
+        <p>Best regards,</p>
+        <strong>Arun</strong>
+      `
+    });
 
     res.status(201).json({ message: 'Message sent successfully' });
   } catch (error) {
