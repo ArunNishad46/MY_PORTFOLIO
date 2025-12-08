@@ -11,7 +11,7 @@ app.use(cors(
   {
     origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
+    allowedHeaders: ["Content-Type"],
   }
 ));
 
@@ -19,7 +19,7 @@ app.use(express.json());
 
 // Brevo API Configuration
 const apiInstance = new Brevo.TransactionalEmailsApi();
-apiInstance.authentications['apiKey'].apiKey = process.env.BREVO_API_KEY;
+apiInstance.authentications['apiKey'].apiKey = process.env.BREVO_API_KEY;     
 
 app.post('/message', async (req, res) => {
   const {name, email, message} = req.body;
