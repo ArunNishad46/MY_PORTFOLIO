@@ -12,8 +12,8 @@ const projects = [
     description: "A simple and responsive To-Do App built with React and Tailwind CSS, allowing users to add, edit, and delete tasks with automatic data persistence using local storage.",
     image: "/image/to-do.webp",
     tech: "React • Tailwind CSS • Local Storage",
-    githubLink: "#",
-    liveLink: "#"
+    githubLink: "https://github.com/ArunNishad46/TO-DO_REACT_APP",
+    liveLink: "https://todo-app-nine-nu-97.vercel.app/"
   },
   {
     title: "Social Media Platform",
