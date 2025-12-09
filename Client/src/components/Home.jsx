@@ -34,7 +34,7 @@ function Home() {
         </h2>
         <div className="flex flex-wrap gap-4">
           <a
-            href="/Arun-CV.pdf"
+            href="/image/ak-resume.pdf"
             download
             className="px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold text-sm transition"
           >
