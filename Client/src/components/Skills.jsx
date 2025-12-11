@@ -5,7 +5,7 @@ function Skills() {
   
   return (
     <section id="skills" className="py-16 border-t border-slate-800">
-      <h2 className="text-4xl font-semibold mb-4 text-center">Tech Stacks</h2>
+      <h2 className="text-4xl font-semibold mb-4 text-center">Skills</h2>
       <p className="text-lg text-slate-300 mb-8 text-center">
         Technologies used recently for building projects.
       </p>
