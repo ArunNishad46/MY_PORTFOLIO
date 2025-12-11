@@ -1,6 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
+import cv from "../../assets/ak-resume.pdf";
 
 function Home() {
 
@@ -34,7 +35,7 @@ function Home() {
         </h2>
         <div className="flex flex-wrap gap-4">
           <a
-            href="/image/ak-resume.pdf"
+            href={cv}
             download
             className="px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold text-sm transition"
           >
