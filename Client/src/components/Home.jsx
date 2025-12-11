@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
-import cv from "../../assets/ak-resume.pdf";
+import cv from "../assets/ak-resume.pdf";
 
 function Home() {
 
