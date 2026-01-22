@@ -16,12 +16,12 @@ const projects = [
     liveLink: "https://todo-app-nine-nu-97.vercel.app/"
   },
   {
-    title: "Social Media Platform",
+    title: "Instaio - Social Media App",
     description: "Build a social media platform that looks like Instagram using the MERN stack. Implemented secure user authentication, account management, and core social features.",
-    image: "/image/instagram-clone.webp",
+    image: "/image/instaio.png",
     tech: "React • Tailwind CSS • Node.js • Express.js • MongoDB • REST API • JWT • Cloudinary • Brevo",
-    githubLink: "https://github.com/ArunNishad46/INSTAGRAM-CLONE-PROJECT",
-    liveLink: "https://instagram-clone-project-two.vercel.app"
+    githubLink: "https://github.com/ArunNishad46/Insta.io",
+    liveLink: "https://instaio.vercel.app"
   }
 ];
 
