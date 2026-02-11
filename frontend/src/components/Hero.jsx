@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Download, Mail, ChevronDown } from 'lucide-react';
 import Spline from '@splinetool/react-spline';
 import { useTheme } from '../context/ThemeContext';
-import ArunResume from '../assets/arun.pdf';
 
 const Hero = ({ data }) => {
   const heroRef = useRef(null);
@@ -126,7 +125,7 @@ const Hero = ({ data }) => {
             style={{ animationDelay: '0.8s', animationFillMode: 'both' }}
           >
             <button
-              onClick={() => window.open(ArunResume, '_blank')}
+              onClick={() => window.open("/arun.pdf", '_blank')}
               className={`${colors.accentBg} text-black border-none rounded-xl px-7 py-3.5 text-base font-bold cursor-pointer 
                 transition-all duration-400 inline-flex items-center gap-2.5 group
                 hover:-translate-y-1`}
