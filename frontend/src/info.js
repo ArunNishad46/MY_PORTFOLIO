@@ -66,7 +66,7 @@ export const portfolioData = {
       id: 4,
       title: "GrabNGo – Grocery E-Commerce Platform",
       description: "GrabNGo is a full-stack grocery e-commerce application built with the MERN stack, featuring secure JWT authentication, product search & filtering, cart and checkout functionality, payment integration, and an admin dashboard for inventory and order management.",
-      image: "/banner-BydpD5MI.png",
+      image: "/grabngo.png",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind", "Redux", "JWT", "Cloudinary", "Brevo"],
       githubUrl: "https://github.com/ArunNishad46/GrabNGo_Grocery_E-Commerce",
       liveUrl: "https://grabngo-grocery-store.vercel.app",
