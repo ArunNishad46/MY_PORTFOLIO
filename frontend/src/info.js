@@ -32,9 +32,8 @@ export const portfolioData = {
     { name: "VS Code", icon: "VscVscode" }
   ],
   projects: [
-    
     {
-      id: 2,
+      id: 1,
       title: "TO-DO App",
       description: "A simple and responsive To-Do App built with React and Tailwind CSS, allowing users to add, edit, and delete tasks with automatic data persistence using local storage.",
       image: "/to-do.webp",
@@ -44,7 +43,7 @@ export const portfolioData = {
       category: "Frontend"
     },
     {
-      id: 3,
+      id: 2,
       title: "Instaio - Social Media App",
       description: "Build a social media platform that looks like Instagram using the MERN stack. Implemented secure user authentication, account management, and core social features.",
       image: "/instaio.png",
@@ -54,7 +53,7 @@ export const portfolioData = {
       category: "Full Stack"
     },
     {
-      id: 4,
+      id: 3,
       title: "GrabNGo – Grocery E-Commerce Platform",
       description: "GrabNGo is a full-stack grocery e-commerce application built with the MERN stack, featuring secure JWT authentication, product search & filtering, cart and checkout functionality, payment integration, and an admin dashboard for inventory and order management.",
       image: "/grabngo.png",
