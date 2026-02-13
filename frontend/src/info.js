@@ -32,16 +32,7 @@ export const portfolioData = {
     { name: "VS Code", icon: "VscVscode" }
   ],
   projects: [
-    {
-      id: 1,
-      title: "College Clone",
-      description: "A modern college website clone built using HTML, CSS, and Bootstrap, featuring a clean UI, responsive design, and easy navigation to showcase academic programs, campus details, and student resources.",
-      image: "/college.png",
-      technologies: ["HTML", "CSS", "Bootstrap"],
-      githubUrl: "https://github.com/College-Clone",
-      liveUrl: "https://arunnishad46.github.io/College-Clone/",
-      category: "Frontend"
-    },
+    
     {
       id: 2,
       title: "TO-DO App",
