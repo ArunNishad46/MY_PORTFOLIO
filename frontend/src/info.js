@@ -3,7 +3,7 @@ export const portfolioData = {
   greeting: "HI THERE! 👋",
   title: "Full Stack Developer",
   about: {
-    description: "Hi, I’m Arun Kumar, a B.Tech graduate in Information Technology and a Full Stack Developer with hands-on experience in the MERN stack (MongoDB, Express.js, React.js, Node.js). I specialize in building responsive, scalable, and user-friendly web applications. I enjoy working across both frontend and backend development, turning ideas into functional and efficient digital solutions. Through academic and personal projects, I have developed practical experience in designing REST APIs, managing databases, and deploying full-stack applications. I focus on writing clean, maintainable code and continuously improving my problem-solving skills.",
+    description: "Hi, I’m Arun, a B.Tech graduate in Information Technology and a Full Stack Developer with hands-on experience in the MERN stack (MongoDB, Express.js, React.js, Node.js). I specialize in building responsive, scalable, and user-friendly web applications. I enjoy working across both frontend and backend development, turning ideas into functional and efficient digital solutions. Through academic and personal projects, I have developed practical experience in designing REST APIs, managing databases, and deploying full-stack applications. I focus on writing clean, maintainable code and continuously improving my problem-solving skills.",
     socialLinks: {
       github: "https://github.com/arunnishad46",
       linkedin: "https://linkedin.com/in/arun-nishad-8b94a3287",
