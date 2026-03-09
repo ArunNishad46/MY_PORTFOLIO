@@ -124,11 +124,13 @@ const Hero = ({ data }) => {
             className="flex gap-4 flex-wrap justify-center lg:justify-start opacity-0 animate-fadeInUp"
             style={{ animationDelay: '0.8s', animationFillMode: 'both' }}
           >
-            <button
-              onClick={() => window.open("/arun.pdf", '_blank')}
+            <a
+              href="/arun.pdf"
+              target="_blank" 
+              rel="noopener noreferrer"
               className={`${colors.accentBg} text-black border-none rounded-xl px-7 py-3.5 text-base font-bold cursor-pointer 
                 transition-all duration-400 inline-flex items-center gap-2.5 group
-                hover:-translate-y-1`}
+                hover:-translate-y-1 underline-none`}
               style={{ boxShadow: `0 8px 30px ${colors.accent}40` }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = `0 15px 40px ${colors.accent}60, 0 0 30px ${colors.accent}30`;
@@ -139,7 +141,7 @@ const Hero = ({ data }) => {
             >
               Download CV
               <Download size={18} className="group-hover:animate-bounce" />
-            </button>
+            </a>
 
             <button
               onClick={scrollToContact}
