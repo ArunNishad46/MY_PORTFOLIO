@@ -125,7 +125,7 @@ const Hero = ({ data }) => {
             style={{ animationDelay: '0.8s', animationFillMode: 'both' }}
           >
             <a
-              href="/arun.pdf"
+              href="/arun_resume.pdf"
               target="_blank" 
               rel="noopener noreferrer"
               className={`${colors.accentBg} text-black border-none rounded-xl px-7 py-3.5 text-base font-bold cursor-pointer 
