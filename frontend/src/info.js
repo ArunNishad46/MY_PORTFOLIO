@@ -1,9 +1,9 @@
 export const portfolioData = {
   name: "Arun",
   greeting: "HI THERE! 👋",
-  title: "Full Stack Developer",
+  title: "Full Stack Developer | GenAI Developer",
   about: {
-    description: "Hi, I’m Arun, a B.Tech graduate in Information Technology and a Full Stack Developer with hands-on experience in the MERN stack (MongoDB, Express.js, React.js, Node.js). I specialize in building responsive, scalable, and user-friendly web applications. I enjoy working across both frontend and backend development, turning ideas into functional and efficient digital solutions. Through academic and personal projects, I have developed practical experience in designing REST APIs, managing databases, and deploying full-stack applications. I focus on writing clean, maintainable code and continuously improving my problem-solving skills.",
+    description: "Hi, I’m Arun, a B.Tech graduate in Information Technology and a Full Stack & GenAI Developer with hands-on experience in the MERN stack (MongoDB, Express.js, React.js, Node.js). I specialize in building responsive, scalable, and user-friendly web applications and AI-powered solutions. I enjoy working across both frontend and backend development, turning ideas into functional and efficient digital solutions. Through academic and personal projects, I have developed practical experience in building REST APIs, implementing secure authentication, managing databases, and deploying full-stack applications. I also have experience with LLMs, RAG, embeddings, vector search, prompt engineering, function calling, and AI agents. I focus on writing clean, maintainable code, solving real-world problems, and continuously improving my development skills.",
     socialLinks: {
       github: "https://github.com/arunnishad46",
       linkedin: "https://linkedin.com/in/arun-nishad-8b94a3287",
@@ -11,25 +11,48 @@ export const portfolioData = {
     }
   },
   skills: [
+    { name: "Java", icon: "FaJava" },
+    { name: "JavaScript", icon: "SiJavascript" },
+    { name: "Python", icon: "FaPython" },
+
     { name: "HTML", icon: "FaHtml5" },
     { name: "CSS", icon: "SiCss3" },
-    { name: "JavaScript", icon: "SiJavascript" },
-    { name: "React", icon: "FaReact" },
     { name: "Tailwind CSS", icon: "SiTailwindcss" },
     // { name: "TypeScript", icon: "SiTypescript" },
+    { name: "React.js", icon: "FaReact" },
+    { name: "Redux", icon: "SiRedux" },
     { name: "Node.js", icon: "FaNodeJs" },
     { name: "Express.js", icon: "SiExpress" },
+    // { name: "Next.js", icon: "RiNextjsFill" },
+
     { name: "MongoDB", icon: "SiMongodb" },
     { name: "MySQL", icon: "GrMysql" },
-    // { name: "Next.js", icon: "RiNextjsFill" },
-    { name: "Redux", icon: "SiRedux" },
-    // { name: "Zustand", icon: "GiBearFace" },
-    { name: "Git", icon: "FaGitAlt" },
-    { name: "GitHub", icon: "AiFillGithub" },
+    { name: "Vector Databases", icon: "FaDatabase" },
+
     // { name: "Docker", icon: "SiDocker" },
     // { name: "AWS", icon: "FaAws" },
+
+    { name: "LLMs", icon: "FaRobot" },
+    { name: "RAG", icon: "FaRobot" },
+    { name: "Prompt Engineering", icon: "FaRobot" },
+    { name: "Embeddings", icon: "FaRobot" },
+    { name: "Vector Search", icon: "FaRobot" },
+    { name: "Function Calling", icon: "FaRobot" },
+    { name: "AI Agents", icon: "FaRobot" },
+
+    { name: "LangChain", icon: "FaRobot" },
+    { name: "OpenAI", icon: "SiOpenai" },
+    { name: "Google Gemini", icon: "SiGoogle" },
+    { name: "Claude", icon: "FaRobot" },
+    { name: "Groq", icon: "FaRobot" },
+    { name: "Web Search APIs", icon: "FaSearch" },
+
+    { name: "Git", icon: "FaGitAlt" },
+    { name: "GitHub", icon: "AiFillGithub" },
     { name: "Postman", icon: "SiPostman" },
-    { name: "VS Code", icon: "VscVscode" }
+    { name: "VS Code", icon: "VscVscode" },
+    { name: "Vercel", icon: "SiVercel" },
+    { name: "Render", icon: "SiRender" }
   ],
   projects: [
     {
@@ -45,7 +68,7 @@ export const portfolioData = {
     {
       id: 2,
       title: "Instaio - Social Media App",
-      description: "Build a social media platform that looks like Instagram using the MERN stack. Implemented secure user authentication, account management, and core social features.",
+      description: "A full-stack social media platform built with the MERN stack. Implemented JWT and cookie-based authentication, email verification, secure password reset workflows, Cloudinary media uploads, and a responsive UI with React, Redux, and Tailwind CSS.",
       image: "/instaio.png",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind", "Redux", "JWT + Cookie", "Cloudinary", "Brevo"],
       githubUrl: "https://github.com/ArunNishad46/Insta.io",
@@ -55,7 +78,7 @@ export const portfolioData = {
     {
       id: 3,
       title: "GrabNGo – Grocery E-Commerce Platform",
-      description: "GrabNGo is a full-stack grocery e-commerce application built with the MERN stack, featuring secure JWT authentication, product search & filtering, cart and checkout functionality, payment integration, and an admin dashboard for inventory and order management.",
+      description: "A full-stack grocery e-commerce platform with authentication, product search and filtering, cart, checkout, payment integration, and an admin dashboard. Implemented JWT authorization, Brevo email services, RESTful APIs, MongoDB-based inventory and order management, and Cloudinary media management.",
       image: "/grabngo.png",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind", "Redux", "JWT", "Cloudinary", "Brevo"],
       githubUrl: "https://github.com/ArunNishad46/GrabNGo_Grocery_E-Commerce",
@@ -66,35 +89,11 @@ export const portfolioData = {
   experience: [
     {
       id: 1,
-      role: "Senior Full Stack Developer",
+      role: "Full Stack Developer",
       company: "Tech Corp",
       duration: "2023 - Present",
       description: "Leading development of microservices architecture, mentoring junior developers, and implementing CI/CD pipelines.",
       technologies: ["React", "Node.js", "AWS", "Docker"]
-    },
-    {
-      id: 2,
-      role: "Full Stack Developer",
-      company: "StartupXYZ",
-      duration: "2021 - 2023",
-      description: "Built and maintained multiple web applications, implemented RESTful APIs, and optimized database performance.",
-      technologies: ["Next.js", "Express", "PostgreSQL", "Redis"]
-    },
-    {
-      id: 3,
-      role: "Frontend Developer",
-      company: "Digital Agency",
-      duration: "2020 - 2021",
-      description: "Developed responsive web interfaces, collaborated with UI/UX designers, and improved site performance by 40%.",
-      technologies: ["React", "TypeScript", "Tailwind", "Figma"]
-    },
-    {
-      id: 4,
-      role: "Junior Developer",
-      company: "WebSolutions Inc.",
-      duration: "2019 - 2020",
-      description: "Assisted in developing web applications, fixed bugs, and learned modern development practices.",
-      technologies: ["JavaScript", "HTML/CSS", "jQuery", "PHP"]
     }
   ],
   education: [
@@ -104,13 +103,13 @@ export const portfolioData = {
       institution: "Chaudhary Charan Singh University, Meerut",
       duration: "2022 - 2026",
       description: "Specialized in Information Technology with core subjects like Data Structures, DBMS, Operating Systems, and Web Technologies.",
-      grade: "CGPA: 7.0/10"
+      grade: "CGPA: 7.38/10"
     },
     {
       id: 2,
       degree: "Intermediate (12th)",
       institution: "Patel Memorial Inter College, Atraulia Azamgarh",
-      duration: "2022",
+      duration: "2021 - 2022",
       description: "Science stream with Mathematics",
       grade: "Percentage: 70%"
     },
@@ -118,7 +117,7 @@ export const portfolioData = {
       id: 3,
       degree: "High School (10th)",
       institution: "Patel Memorial Inter College, Atraulia Azamgarh",
-      duration: "2020",
+      duration: "2019 - 2020",
       description: "Completed high school with focus on Science and Mathematics.",
       grade: "Percentage: 77%"
     }
@@ -126,7 +125,7 @@ export const portfolioData = {
   contact: {
     email: "1242arun@gmail.com",
     phone: "+91 9555040275",
-    location: "Noida, India",
+    location: "Delhi, India",
     socialLinks: {
       github: "https://github.com/arunnishad46",
       linkedin: "https://linkedin.com/in/arun-nishad-8b94a3287",
